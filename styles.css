@@ -1,0 +1,13 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Montserrat:400,700|Permanent+Marker&display=swap");
+
+:root {
+  --slantedText: "Permanent Marker", cursive;
+  --primaryColor: #f38181;
+  --secondaryColor: #fce38a;
+  --mainTransition: all 0.2s ease-in-out;
+  --letterSpacing: 0.5rem;
+}
+body {
+  font-family: "Merriweather", serif;
+}
