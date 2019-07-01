@@ -1,13 +1,195 @@
 /* Google Fonts */
-@import url("https://fonts.googleapis.com/css?family=Merriweather|Montserrat:400,700|Permanent+Marker&display=swap");
-
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Montserrat:400,700|Barriecito&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 :root {
-  --slantedText: "Permanent Marker", cursive;
-  --primaryColor: #f38181;
-  --secondaryColor: #fce38a;
+  --slantedText: "Barriecito", cursive;
+  --headingFont: "Montserrat", sans-serif;
+  --primaryColor: #cf5c36;
+  --secondaryColor: #efc88b;
+  --mainDarkColor: #000000;
+  --mainLightColor: #eee5e9;
+  --mainLightGrey: #4c4c4c;
   --mainTransition: all 0.2s ease-in-out;
   --letterSpacing: 0.5rem;
 }
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 body {
   font-family: "Merriweather", serif;
+  line-height: 1.5;
 }
+a {
+  text-decoration: none;
+}
+/* Header */
+.header {
+  min-height: 98vh;
+  background: linear-gradient(
+      rgba(252, 227, 138, 0.2),
+      rgba(252, 227, 138, 0.2)
+    ),
+    url(./images/main-bg.jpg) center/cover no-repeat fixed;
+  position: relative;
+}
+.banner {
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.banner-subtitle {
+  font-family: var(--slantedText);
+  font-size: 1.8rem;
+  color: var(--primaryColor);
+  letter-spacing: var(--letterSpacing);
+  text-transform: capitalize;
+  animation: slideFromRight 3s ease-in-out 1;
+}
+.banner-title {
+  font-family: var(--headingFont);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing);
+  margin-top: 2rem;
+  font-size: 3rem;
+  color: var(--mainDarkColor);
+  animation: slideFromLeft 3s ease-in-out 1;
+}
+.banner-btn,
+.main-btn {
+  display: inline-block;
+  padding: 1.5rem 2rem;
+  background: var(--primaryColor);
+  color: var(--mainLightColor);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing);
+  outline: 0.8rem solid var(--primaryColor);
+  outline-offset: 4px;
+  margin-top: 3rem;
+  transition: var(--mainTransition);
+}
+.banner-btn {
+  animation: show 1s ease-in-out 1;
+}
+.banner-btn:hover {
+  color: var(--secondaryColor);
+  opacity: 0.7;
+}
+/* Animation */
+@keyframes show {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-1000px);
+  }
+  50% {
+    transform: translateX(200px);
+  }
+  75% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(1000px);
+  }
+  50% {
+    transform: translateX(-200px);
+  }
+  75% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+/* End of Animation */
+/* End of Header */
+/* Content Divider */
+.content-divider {
+  height: 0.5rem;
+  background: linear-gradient(
+    to left,
+    var(--primaryColor),
+    var(--secondaryColor),
+    var(--primaryColor)
+  );
+}
+/* End of Content Divider */
+/* Skill Section */
+.skills {
+  text-align: center;
+}
+.skill {
+  padding-bottom: 1rem;
+  background: var(--mainLightColor);
+  transition: var(--mainTransition);
+}
+.skill-icon {
+  font-size: 2rem;
+  color: var(--mainLightGrey);
+  display: inline-block;
+  margin-top: 2rem;
+  transition: var(--mainTransition);
+}
+.skill-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing);
+  color: var(--primaryColor);
+  margin: 1rem auto;
+  transition: var(--mainTransition);
+}
+.skill-description {
+  max-width: 13rem;
+  margin: 0 auto;
+  color: var(--mainLightGrey);
+  transition: var(--mainTransition);
+}
+.skill:hover {
+  background: var(--primaryColor);
+}
+.skill:hover .skill-icon {
+  transform: translateY(-3px);
+  color: var(--mainDarkColor);
+}
+.skill:hover .skill-title {
+  color: var(--mainLightColor);
+}
+.skill:hover .skill-description {
+  color: var(--mainDarkColor);
+}
+/* Responsive Layout */
+@media screen and (min-width: 576px) {
+  .skill {
+    float: left;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .skill {
+    width: 25%;
+  }
+}
+/* End of Responsive Layout */
+/* End of Skill Section */
