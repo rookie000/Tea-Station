@@ -13,12 +13,27 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <!-- Navbutton -->
+    <span class="nav-btn" id="nav-btn"><i class="fas fa-bars"></i></span>
+    <!-- End of Navbutton -->
+    <!-- NavBar -->
+    <div class="nav-bar" id="nav-bar">
+      <span class="close" id="close"><i class="fa fa-times"></i></span>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">home</a></li>
+        <li><a href="skills.html" class="nav-link">skills</a></li>
+        <li><a href="about.html" class="nav-link">about</a></li>
+        <li><a href="products.html" class="nav-link">products</a></li>
+        <li></li>
+      </ul>
+    </div>
+    <!-- End of NavBar -->
     <!-- Header -->
     <header class="header">
       <div class="banner">
         <h3 class="banner-subtitle">over one hundred flavours of chai</h3>
         <h1 class="banner-title">specially crafted tea</h1>
-        <a href="explore.html" class="banner-btn">explore</a>
+        <a href="skills.html" class="banner-btn">explore</a>
       </div>
     </header>
     <!-- End of Header -->
@@ -89,14 +104,14 @@
         <article class="about-right">
           <div class="about-container">
             <h3 class="section-sub">about our</h3>
-            <h2 class="section-title">tea station</h2>
+            <h2 class="section-title gray-font">tea station</h2>
           </div>
-          <p class="about-info">
+          <p class="about-info gray-font">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Molestiae,voluptas.Dolor sit amet consectetur adipisicing
             elit.Molestiae,voluptas
           </p>
-          <p class="about-info">
+          <p class="about-info gray-font">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora,
             ut!
           </p>
@@ -105,5 +120,138 @@
       </div>
     </section>
     <!-- End of two column section -->
+    <!-- Product Section -->
+    <section class="inventory-section">
+      <div class="clearfix section-center">
+        <!-- Product summary -->
+        <article class="product-summary">
+          <h3 class="section-sub">check out</h3>
+          <h2 class="lighter-font section-title ">
+            our products
+          </h2>
+          <p class="about-info lighter-font">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expbo
+            voluptatem id dicta sint aut nam!
+          </p>
+          <a href="products.html" class="main-btn">inventory</a>
+        </article>
+        <!-- End of Product Summary -->
+        <!-- Inventory -->
+        <article class="inventory-container">
+          <article class="inventory">
+            <!-- product 1 -->
+            <img
+              src="./images/product-1.jpg"
+              alt="product-img"
+              class="product-img"
+            />
+            <h3 class="product-title">product title</h3>
+            <h3 class="product-price">$6.99</h3>
+            <!-- end of product 1 -->
+          </article>
+          <article class="inventory">
+            <!-- product 2-->
+            <img
+              src="./images/product-3.jpg"
+              alt="product-img"
+              class="product-img"
+            />
+            <h3 class="product-title">product title</h3>
+            <h3 class="product-price">$6.99</h3>
+            <!-- end of product 2-->
+          </article>
+
+          <article class="inventory">
+            <!-- product 3 -->
+            <img
+              src="./images/product-2.jpg"
+              alt="product-img"
+              class="product-img"
+            />
+            <h3 class="product-title">product title</h3>
+            <h3 class="product-price">$6.99</h3>
+            <!-- end of product 3 -->
+          </article>
+        </article>
+        <!-- End of Inventory -->
+      </div>
+    </section>
+    <!-- End of Product Section -->
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="clearfix section-center">
+        <!-- Contact info -->
+        <article class="contact-info-container">
+          <div class="contact">
+            <h3 class="contact-info">
+              <span><i class="fas fa-map-marker"></i></span>address
+            </h3>
+            <p class="address">32 Schmeler Glen, Port Angelaborough 49659</p>
+          </div>
+
+          <div class="contact">
+            <h3 class="contact-info">
+              <span><i class="fas fa-envelope"></i></span>email
+            </h3>
+            <p class="address">myemail@email.com</p>
+          </div>
+
+          <div class="contact">
+            <h3 class="contact-info">
+              <span><i class="fas fa-phone"></i></span>phone
+            </h3>
+            <p class="address">535.166.3672</p>
+          </div>
+        </article>
+        <!-- End of contact info -->
+        <!-- Contact form -->
+        <article class="contact-form-container">
+          <form class="form">
+            <input
+              class="form-content"
+              type="text"
+              name="name"
+              placeholder="name"
+            />
+            <input
+              class="form-content"
+              type="email"
+              name="email"
+              placeholder="your email"
+            />
+            <textarea
+              class="form-content"
+              name="message"
+              rows="10"
+              placeholder="your message"
+            ></textarea>
+            <button type="submit" class="main-btn send-btn">send</button>
+          </form>
+        </article>
+        <!-- End of contact form -->
+      </div>
+    </section>
+    <!-- End of Contact section -->
+    <!-- Footer section -->
+    <footer class="footer-section">
+      <div class="clearfix section-center footer">
+        <div class="social-icons">
+          <a href="" class="footer-link"
+            ><span><i class="fab fa-facebook"></i></span
+          ></a>
+          <a href="" class="footer-link"
+            ><span><i class="fab fa-instagram"></i></span
+          ></a>
+          <a href="" class="footer-link"
+            ><span><i class="fab fa-twitter"></i></span
+          ></a>
+        </div>
+        <p class="copyright">
+          <span class="trademark">&copy;tea station.</span>all rights reserved
+        </p>
+      </div>
+    </footer>
+    <!-- End of Footer section -->
+    <script src="app.js"></script>
   </body>
 </html>
